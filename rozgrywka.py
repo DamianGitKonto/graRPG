@@ -19,7 +19,7 @@ elif p1 == "c":
 elif p1 == "d":
     print("Gracz 1 wybrał sir Rogera \n")
 ###########################################################################################
-# Postać drugiego gracza, narazie nie aktywna. Może w przyszłości.
+
 p2 = input("Gracz 2 Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
 if p2 == "a":
      p2 = p
