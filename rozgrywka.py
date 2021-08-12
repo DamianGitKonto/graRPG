@@ -3,11 +3,12 @@
 # -*- coding: utf8 -*-w
 import POWITANIE
 import Lokacje
-import Postacie
+from Postacie import obiekt1
+from Postacie import obiekt2
+from Postacie import obiekt3
+from Postacie import obiekt4
 
 p = ""
-
-
 
 p1 = input("Gracz 1. Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
 if p1 == "a":
@@ -18,27 +19,30 @@ elif p1 == "c":
     print("Gracz 1 wybiera Ericka \n")
 elif p1 == "d":
     print("Gracz 1 wybrał sir Rogera \n")
-###########################################################################################
+
 
 p2 = input("Gracz 2 Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
 if p2 == "a":
-     p2 = p
-     print("Gracz 2 wybrał Alfonsa \n")
+    p2 = p
+    print("Gracz 2 wybrał Alfonsa \n")
 if p2 == "b":
-     p2 = p
-     print("Gracz 2 wybrał Girhama \n")
+    p2 = p
+    print("Gracz 2 wybrał Girhama \n")
 elif p2 == "c":
-     p2 = p
-     print("Gracz 1 wybiera Ericka \n")
+    p2 = p
+    print("Gracz 1 wybiera Ericka \n")
 elif p2 == "d":
-     p2 = p
-     print("Gracz 1 wybrał sir Rogera \n")
+    p2 = p
+    print("Gracz 1 wybrał sir Rogera \n")
+
+
 ####################################################################################################
 
 POWITANIE.Powitanie()
 
 Lokacje.Lokacje()
-Postacie.Postacie
+
+
 
 
 
