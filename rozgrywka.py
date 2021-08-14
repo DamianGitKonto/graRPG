@@ -1,13 +1,12 @@
 # Role Play Game
 
 # -*- coding: utf8 -*-w
-import POWITANIE
+import Powitanie
 import Lokacje
 from Postacie import obiekt1
 from Postacie import obiekt2
 from Postacie import obiekt3
 from Postacie import obiekt4
-
 p = ""
 
 p1 = input("Gracz 1. Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
@@ -35,17 +34,10 @@ elif p2 == "d":
     p2 = p
     print("Gracz 1 wybrał sir Rogera \n")
 
+Powitanie.Powitanie()
+Lokacje.lokacje()
 
-####################################################################################################
-
-POWITANIE.Powitanie()
-
-Lokacje.Lokacje()
-
-
-
-
-
+####################
 # WALKA
 ######################################################################################################
 interakcja1 = input("Co robisz? \n\nWalczysz w \n czy \nUciekasz u \n")
