@@ -1,54 +1,67 @@
 # Role Play Game
 
 # -*- coding: utf8 -*-w
+import time
+import Ataki
 import Powitanie
-import Lokacje
+from Lokacje import story
 from Postacie import obiekt1
 from Postacie import obiekt2
 from Postacie import obiekt3
 from Postacie import obiekt4
+from Postacie import obiekt5
+
+
+
 p = ""
 
 p1 = input("Gracz 1. Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
+
+
 if p1 == "a":
+    player1 = obiekt1
     print("Gracz 1 wybiera Alfonsa \n")
 elif p1 == "b":
+    player1 = obiekt2
     print("Gracz 1 wybrał Girhama \n")
 elif p1 == "c":
+    player1 = obiekt3
     print("Gracz 1 wybiera Ericka \n")
 elif p1 == "d":
+    player1 = obiekt4
     print("Gracz 1 wybrał sir Rogera \n")
 
 
-p2 = input("Gracz 2 Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
-if p2 == "a":
-    p2 = p
-    print("Gracz 2 wybrał Alfonsa \n")
-if p2 == "b":
-    p2 = p
-    print("Gracz 2 wybrał Girhama \n")
-elif p2 == "c":
-    p2 = p
-    print("Gracz 1 wybiera Ericka \n")
-elif p2 == "d":
-    p2 = p
-    print("Gracz 1 wybrał sir Rogera \n")
+# Drugi gracz chwilowo jest zablokowany
+# p2 = input("Gracz 2 Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
+# if p2 == "a":
+#    p2 = p
+#    print("Gracz 2 wybrał Alfonsa \n")
+# if p2 == "b":
+#    p2 = p
+#    print("Gracz 2 wybrał Girhama \n")
+# elif p2 == "c":
+#   p2 = p
+#    print("Gracz 1 wybiera Ericka \n")
+# elif p2 == "d":
+#    p2 = p
+#    print("Gracz 1 wybrał sir Rogera \n")
 
 Powitanie.Powitanie()
-Lokacje.lokacje()
-
+time.sleep(3)
+print(story[1])
+time.sleep(3)
 ####################
 # WALKA
 ######################################################################################################
 interakcja1 = input("Co robisz? \n\nWalczysz w \n czy \nUciekasz u \n")
 
 if interakcja1 == "w":
-    obiekt2.hp -= 5
-    print(obiekt2.hp)
+    Ataki.atak1()
+    Ataki.atak2()
 
-if interakcja1 == "u" and obiekt2.power + obiekt2.level * 0.15 > obiekt1.strength:
+
+elif interakcja1 == "u":
     print("Uciekłes")
 else:
-    obiekt2.hp -= obiekt1.power + obiekt1.spell1
-    print("Dostałeś kulą ognia traciesz {}".format(obiekt1.power + obiekt1.spell1))
-    print("Masz {} HP ".format(obiekt2.hp))
+    print("Nie możesz tu tego zrobić")
