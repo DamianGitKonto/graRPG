@@ -1,67 +1,54 @@
 # Role Play Game
 
 # -*- coding: utf8 -*-w
+########################### IMPORTY
 import time
-import Ataki
 import Powitanie
 from Lokacje import story
-from Postacie import obiekt1
-from Postacie import obiekt2
-from Postacie import obiekt3
-from Postacie import obiekt4
-from Postacie import obiekt5
-
-
-
+from Postacie import obiekt1, obiekt2, obiekt3, obiekt4, obiekt5
+# import Logi
+############################ ZMIENNE
 p = ""
+name = ""
+player1 = ""
+log = {}
+enemy = ""
 
+############################## WYBÓR POSTACI
 p1 = input("Gracz 1. Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
-
 
 if p1 == "a":
     player1 = obiekt1
-    print("Gracz 1 wybiera Alfonsa \n")
+    print("\n Gracz 1 wybiera: \n" + obiekt1.name + "a")
 elif p1 == "b":
     player1 = obiekt2
-    print("Gracz 1 wybrał Girhama \n")
+    print("\n Gracz 1 wybiera: \n" + obiekt2.name + "a")
 elif p1 == "c":
     player1 = obiekt3
-    print("Gracz 1 wybiera Ericka \n")
+    print("\n Gracz 1 wybiera: \n" + obiekt3.name + "a")
 elif p1 == "d":
     player1 = obiekt4
-    print("Gracz 1 wybrał sir Rogera \n")
+    print("\n Gracz 1 wybiera: \n" + obiekt4.name + "a")
 
-
-# Drugi gracz chwilowo jest zablokowany
-# p2 = input("Gracz 2 Wybierz postać \nA. Alfons \nB. Girham \nC. Erick \nD. sir Roger ")
-# if p2 == "a":
-#    p2 = p
-#    print("Gracz 2 wybrał Alfonsa \n")
-# if p2 == "b":
-#    p2 = p
-#    print("Gracz 2 wybrał Girhama \n")
-# elif p2 == "c":
-#   p2 = p
-#    print("Gracz 1 wybiera Ericka \n")
-# elif p2 == "d":
-#    p2 = p
-#    print("Gracz 1 wybrał sir Rogera \n")
-
+########################## HISTORIA
 Powitanie.Powitanie()
-time.sleep(3)
+time.sleep(1)
 print(story[1])
-time.sleep(3)
-####################
-# WALKA
-######################################################################################################
-interakcja1 = input("Co robisz? \n\nWalczysz w \n czy \nUciekasz u \n")
+time.sleep(1)
+######################################## WALKA
 
-if interakcja1 == "w":
-    Ataki.atak1()
-    Ataki.atak2()
+interakcja1 = input("Co robisz? \n\n atakujesz a \n czy \nUciekasz u \n")
 
+if interakcja1 == "a":
+    enemy = obiekt5
+    print(enemy.hp)
+    print("Atak!")
+    atak1()
 
 elif interakcja1 == "u":
     print("Uciekłes")
 else:
     print("Nie możesz tu tego zrobić")
+
+
+
