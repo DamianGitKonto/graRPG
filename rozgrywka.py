@@ -6,6 +6,7 @@ import time
 import Powitanie
 from Lokacje import story
 from Postacie import obiekt1, obiekt2, obiekt3, obiekt4, obiekt5
+from Postacie import Monster
 # import Logi
 ############################ ZMIENNE
 p = ""
@@ -41,14 +42,13 @@ interakcja1 = input("Co robisz? \n\n atakujesz a \n czy \nUciekasz u \n")
 
 if interakcja1 == "a":
     enemy = obiekt5
-    print(enemy.hp)
-    print("Atak!")
-    atak1()
+    Monster.atak1(Monster, player1, obiekt5)
+
+
 
 elif interakcja1 == "u":
     print("Uciekłes")
-else:
-    print("Nie możesz tu tego zrobić")
+
 
 
 
