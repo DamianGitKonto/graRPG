@@ -1,7 +1,6 @@
 # KLASY
 ##########################################################################################
 
-
 class Characters:
     def __init__(self, name, hp, power, strength, level):
         self.name = name
@@ -38,15 +37,18 @@ class Knight (Characters):
         pass
 
 
+
+
+
 class Monster (Characters):
     def __init__(self, name, hp, power, strength, level):
         super().__init__(name, hp, power, strength, level)
 
-    def atak1(self):
+    def atak1(self, player1, obiekt5):
         player1.hp -= obiekt5.power
         print("Ghoul bierze zamach wielką łapą i masakruje Twoje ramię pazurami")
-        print("Masz {} HP ".format(player.hp))
-    #
+        print("Masz {} HP ".format(player1.hp))
+
     # def atak2():
     #     print("Szybkim ruchem Goul wpada na Ciebie zębami wgryza się w Twoją nogę")
     #     player1.hp -= obiekt5.spell1
