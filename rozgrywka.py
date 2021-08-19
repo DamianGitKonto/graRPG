@@ -44,8 +44,6 @@ if interakcja1 == "a":
     enemy = obiekt5
     Monster.atak1(Monster, player1, obiekt5)
 
-
-
 elif interakcja1 == "u":
     print("Uciekłes")
 
