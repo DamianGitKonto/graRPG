@@ -27,8 +27,11 @@ class Knight (Characters):
         super().__init__(name, hp, power, strength, level)
         self.armor = int(armor)
 
-    # def atak3():
-    #     szybkie_ciecie = -10
+    def atak1(self, player1, enemy):
+        enemy.hp -= player1.power
+        print("Szybkim ruchem miecza zadajesz bolesny cios przeciwkowi")
+        print(f"{enemy.name} ma {enemy.hp} hp")
+        print()
 
     def attack1(self):
         pass
@@ -44,15 +47,17 @@ class Monster (Characters):
     def __init__(self, name, hp, power, strength, level):
         super().__init__(name, hp, power, strength, level)
 
-    def atak1(self, player1, obiekt5):
-        player1.hp -= obiekt5.power
+    def atak1(self, player1, enemy):
+        player1.hp -= enemy.power
         print("Ghoul bierze zamach wielką łapą i masakruje Twoje ramię pazurami")
-        print("Masz {} HP ".format(player1.hp))
+        print(f"Masz {player1.hp} hp")
+        print()
 
-    # def atak2():
-    #     print("Szybkim ruchem Goul wpada na Ciebie zębami wgryza się w Twoją nogę")
-    #     player1.hp -= obiekt5.spell1
-    #     print("Masz {} HP ".format(player1.hp))
+    def atak2(self, player1, enemy):
+        print("Szybkim ruchem Goul wpada na Ciebie, zębami wgryza się w Twoją nogę")
+        player1.hp -= enemy.power
+        print(f"Masz {player1.hp} hp")
+        print()
 
     def skill1(self):
         pass
